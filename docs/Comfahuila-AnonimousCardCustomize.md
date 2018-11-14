@@ -38,7 +38,7 @@ POST | /app/ext/TUP/Comfahuila/Finance/AnonymousCards/Customizations | [x]
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :--------: | ------------ | :-----:
 DocNumber | String | Número de documento del cliente al que se asocia la tarjeta. | [x]
-DocType | String | Tipo de documento del cliente al que se asocia la tarjeta. Cualquier valor de "Acrónimo" en la tabla de tipos de documento. | [x]
+DocType | String | Tipo de documento del cliente al que se asocia la tarjeta. Cualquier valor de "Acrónimo" en la tabla de tipos de documento.
 Pan | String | Número de tarjeta que se debe asociar con el cliente. | [x]
 FirstName | String | Nombre(s) del cliente que va a asociar con la tarjeta. | [x]
 LastName | String | Apellido(s) del cliente que se va a asociar con la  tarjeta. | [x]
