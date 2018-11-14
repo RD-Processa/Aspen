@@ -21,7 +21,7 @@ POST | /app/ext/TUP/Comfahuila/Finance/AnonymousCards/Reissues | [x]
 {
 	"DocNumber": "201810180044",
 	"DocType": "CE",
-	"Pan": "************3292630",
+	"Pan": "347890132926301",
 	"CorrelationalId": "aeccc385-19de-4b1d-aa3a-df44d6981564"
 }
 ```
