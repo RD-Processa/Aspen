@@ -1,4 +1,5 @@
 # Comfamiliar Huila
+
 ## Reexpedición de tarjeta anónima
 
 Asocia un nuevo número de tarjeta a un cliente que ya existe
@@ -31,7 +32,7 @@ Campo | Tipo de dato | Descripción | Requerido
 :---: | :--------: | ------------ | :-----:
 Correlationalld | String | Identificador unívoco de la solicitud. Debe ser único por cada  solicitud/request  que se haga al servicio. | [x]
 DocNumber | String | Número de documento del cliente que se va a asociar con el nuevo número de la tarjeta. | [x]
-DocType | String | Tipo de documento del cliente que se va a asociar con el nuevo número de la tarjeta.
+DocType | String | Tipo de documento del cliente que se va a asociar con el nuevo número de la tarjeta. Cualquier valor de "Acrónimo" en la tabla de tipos de documento.
 Pan | String | Nuevo número de tarjeta que se va a asociar con el cliente. | [x]
 
 ## Datos de la respuesta
@@ -59,6 +60,26 @@ Successful | Bool | Cuando es true indica que la ejecución de la operación ter
 Empty | Bool | Para uso interno. No es necesario procesar esta información.
 MachineName | String | Para uso interno. No es necesario procesar esta información.
 Date | DateTime | Fecha y hora que en que se procesó la operación.
+
+## Anexos
+
+### Tipos de documento
+
+Acrónimos a usar en el campo DocType de los datos de solicitud.
+Acrónimo | Descripción | ¿Es valor predeterminado?
+:------: | :---------: | :----------------------:
+CC | CÉDULA DE CIUDADANÍA | Si
+CE | CÉDULA DE EXTRANJERÍA | No
+CF | CODIGO DE FENALCO | No
+DI | PASE  DIPLOMATICO | No
+NI | No. ÚNICO TRIBUTARIO | No
+NJ | NIT EMPRESARIAL | No
+NT | NIT PERSONA NATURAL | No
+NU | No. ÚNICO DE IDENTIFICACIÓN | No
+PS | PASAPORTE | No
+RC | REGISTRO CIVIL | No
+TI | TARJETA DE IDENTIDAD | No
+
 
 ## Información relacionada
 
