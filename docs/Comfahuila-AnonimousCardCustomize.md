@@ -82,6 +82,7 @@ Date | DateTime | Fecha y hora que en que se procesó la operación.
 ### Tipos de documento
 
 Acrónimos a usar en el campo DocType de los datos de solicitud.
+
 Acrónimo | Descripción | ¿Es valor predeterminado?
 :------: | :---------: | :----------------------:
 CC | CÉDULA DE CIUDADANÍA | Si
