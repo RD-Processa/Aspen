@@ -6,7 +6,7 @@ Permite a un adquirente o comercio, realizar un retiro en efectivo mediante el u
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-DELETE | http://localhost/api/app/tokens/{Token} | [x]
+PATCH | http://localhost/api/app/financial/withdrawals/{Token} | [x]
 
 
 ## Datos de la solicitud
