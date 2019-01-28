@@ -55,7 +55,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 502
 - Reason: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
-- EventId: 15859
+- EventId: 15859, 40030, 40031, 40032
 
 ## BadRequest
 
@@ -80,6 +80,12 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 403
 - Reason: Su AppKey ha sido deshabilitado o no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
 - EventId: 1000478
+
+## UnauthorizedScope
+
+- StatusCode: 401
+- Reason: Su AppKey no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
+- EventId: 1000479
 
 ## GatewayTimeout
 
@@ -156,3 +162,39 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 406
 - Reason: El formato del secreto que se intenta establecer para la aplicación, no cumple con alguna de las políticas. El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
 - EventId: 15864.
+
+## HistoricalCleanerError
+
+- StatusCode: 504
+- Reason: Error al ejecutar la tarea de limpieza de la base de datos. Se intentará de nuevo en unos minutos. 
+- EventId: 99004
+
+## SaveTraceError
+- StatusCode: 504
+- Reason: No se pudo guardar la información de seguimiento de la solicitud. Se intentará de nuevo en unos minutos. 
+- EventId: 99006
+
+## AuthProviderError
+- StatusCode: 500
+- Reason: El servicio de autenticación no está generando respuestas. 
+- EventId: 30566, 30567, 30568, 30569, 30570
+
+## NotImplemented
+- StatusCode: 501
+- Reason: No se ha establecido la configuración para el envió de mensajes de activación. Necesita establecer la configuración en el archivo de configuración del ApiKey. Pónganse en contacto con nuestro equipo de monitoreo.
+- EventId: 20099
+
+## ServiceUnavailable
+- StatusCode: 503
+- Reason: El sistema encargado de procesar la solicitud no está respondiendo. Pónganse en contacto con nuestro equipo de monitoreo.
+- EventId: 20100
+
+## ValidateIdentityFailed
+- StatusCode: 417
+- Reason: El código de activación no es valido, ha excedido el número de intentos permitidos, necesita esperar algunos segundos para intentar de nuevo o no se encontraron datos con los valores proporcionados. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
+- EventId: 15868
+
+## FinancialUnauthorized
+- StatusCode: 406
+- Reason: El sistema autorizador rechazo la transacción. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
+- EventId: 87000

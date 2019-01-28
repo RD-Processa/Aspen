@@ -6,7 +6,7 @@ Permite a un adquirente o comercio, verificar la validez de un token de pago que
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-PUT | /app/tokens/{Token} | [x]
+PUT | http://localhost/api/app/tokens/{Token} | [x]
 
 ## Datos de la solicitud
 
@@ -14,7 +14,6 @@ PUT | /app/tokens/{Token} | [x]
 {
   "DocType": "CC",
   "DocNumber": "0000000000",
-  "ChannelKey": "ATM",
   "Metadata": "RANDOM_DATA_BY_ACQUIRER"
 }
 ```
@@ -26,7 +25,6 @@ Campo | Tipo de dato | Descripción | Requerido
 {Token} | string | Token de pago que se desea verificar. Valor en la URL sin corchetes | [x]
 DocType | string | Tipo de documento del usuario para el que se genera el token | [x]
 DocNumber | string | Número de documento del usuario para el que se genera el token | [x]
-ChannelKey | string | Cadena que identifica de manera unívoca [el canal](Get-Channels.md) para el que se generó el token | [x]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [x]
 
 ## Datos de la respuesta
@@ -44,8 +42,6 @@ HttpStatus | Tipo de dato | Descripción
 
 - [Tokenización: Concepto general](Tokenization.md)
 
-- [Canales para tokens de pago](Get-Channels.md)
-
-- [Generación de un token de pago](Generate-PaymentToken.md)
+- [Generación de un token transaccional](Generate-PaymentToken.md)
 
 - [Proveedor de servicios de tokens (TSP)](Tokenization.md#tps)
