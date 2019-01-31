@@ -20,4 +20,8 @@ pages:
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
 - Retiro con token transaccional: Perform-Withdrawal.md
 - Solicitud de envío de token transaccional: Send-TrxToken.md
+- Activación de una tarjeta y asignación de clave: Perform-ActivateCard.md
+- Bloqueo de una tarjeta: Perform-HoldCard.md
+- Cambio de clave de una tarjeta: Perform-PinChange.md
+- Reasignación de clave de una tarjeta: Perform-PinReassignment.md
 - (Apéndice) Mensajes de respuesta: Responses.md
