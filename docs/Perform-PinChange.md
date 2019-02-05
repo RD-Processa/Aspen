@@ -12,12 +12,10 @@ Procesa una solicitud para realizar el cambio de clave de la tarjeta de un clien
 
 ```json
 {
-  "CorrelationalId": "f8f14a9b-45b6-4cce-b45d-7353a99b1f65",
-  "Channel": "COMPCN2SISSOIL27AJR8",
   "AcountNumber": "6039593553310257",
   "OldPin": "5ABB40E21DD968FA",
   "NewPin": "5B4BB2AE1E485785",
-  "Kwp": "21000000075",
+  "Kwp": "B21000000075",
   "VerificationCode" : "CODE12345"
 }
 ```
@@ -26,13 +24,11 @@ Procesa una solicitud para realizar el cambio de clave de la tarjeta de un clien
 
 Campo | Tipo de dato| Descripción | Requerido
 :---: | :--------:| ------------ | :-----:
-CorrelationalId | guid | Identificador de la petición, debe ser único por cada solicitud (request) que se realice. | [ Si ]
-Channel | string | Identificador del canal para un cliente. Este valor será entregado al cliente. | [ Si ]
 AccountNumber | string | Número de la tarjeta que se envía en la solicitud para ser bloqueada. | [ Si ]
-OldPin | string | Clave actual de la tarjeta que envía el cliente en la operación para ser cambiada. Este puede ser el pin con longitud de 4 dígitos o el pinblock como una cadena hexadecimal de longitud 16. | [ Si ]
-NewPin | string | Clave nueva de la tarjeta que envía el cliente para ser asignada a la tarjeta. Este puede ser el pin con longitud de 4 dígitos o el pinblock como una cadena hexadecimal de longitud 16. | [ Si ]
-Kwp | string | Si se envía el pinblock en el pin de la tarjeta, es obligatorio enviar la Llave KWP con el nombre de la llave asociada, para realizar la “traducción de pin”. | [ Si ]
-VerificationCode | string | Código de verificación para realizar validaciones relacionadas con el cliente. | [Si] 
+OldPin | string | Clave actual de la tarjeta que envía el cliente en la operación para ser cambiada. Se debe enviar el pinblock como una cadena hexadecimal de longitud 16, ejemplo "5ABB40E21DD968FA". | [ Si ]
+NewPin | string | Clave nueva de la tarjeta que envía el cliente para ser asignada a la tarjeta. Se debe enviar el pinblock como una cadena hexadecimal de longitud 16, ejemplo "5B4BB2AE1E485785". | [ Si ]
+Kwp | string | Nombre de la llave KWP con la cual fue generado el pinblock, se debe enviar en este campo el nombre asociado a la llave KWP sin el prefijo para poder realizar la “traducción del pinblock”. | [ Si ]
+VerificationCode | string | Código de verificación para realizar validaciones en datacrédito relacionadas con el cliente. | [Si] 
 
 ## Datos de la respuesta
 
@@ -60,7 +56,3 @@ HttpStatus | Tipo | Descripción
 ## Ejemplo en Postman
 
 ![POSTMAN](Perform-PinReassignment.png)
-
-
-  
-

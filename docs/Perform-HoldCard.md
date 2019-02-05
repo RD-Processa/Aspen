@@ -12,11 +12,9 @@ Procesa una solicitud para realizar el bloqueo de la tarjeta de un cliente.
 
 ```json
 {
-  "CorrelationalId": "g6t14a9b-42b1-4dde-a45d-4568a99b1f65",
-  "Channel": "COMPCN2SISSOIL27AJR8",
   "AcountNumber": "6039593553310257",
   "Pin": "5ABB40E21DD968FA",
-  "Kwp": "21000000075",
+  "Kwp": "B21000000075",
   "Reason": 3001,
   "VerificationCode" : "CODE12345"
 }
@@ -26,13 +24,11 @@ Procesa una solicitud para realizar el bloqueo de la tarjeta de un cliente.
 
 Campo | Tipo de dato| Descripción | Requerido
 :---: | :--------:| ------------ | :-----:
-CorrelationalId | guid | Identificador de la petición, debe ser único por cada solicitud (request) que se realice. | [ Si ]
-Channel | string | Identificador del canal para un cliente. Este valor será entregado al cliente. | [ Si ]
 AccountNumber | string | Número de la tarjeta que se envía en la solicitud para ser bloqueada. | [ Si ]
-Pin | string | Clave actual de la tarjeta que se va a bloquear. Este puede ser el pin con longitud de 4 dígitos o el pinblock como una cadena hexadecimal de longitud 16. | [ Si ]
-Kwp | string | Si se envía el pinblock en el pin de la tarjeta, es obligatorio enviar la Llave KWP con el nombre de la llave asociada, para realizar la “traducción de pin”. | [ Si ]
-Reason | int | [Código](#Códigos-de-bloqueo-de-una-tarjeta) de 4 dígitos que indoca la razón por la cual será bloqueada la tarjeta. | [ Si ]
-VerificationCode | string | Código de verificación para realizar validaciones relacionadas con el cliente. | [ Si ] 
+Pin | string | Clave de la tarjeta que se asigna en el proceso de activación. Se debe enviar el pinblock como una cadena hexadecimal de longitud 16, ejemplo "5ABB40E21DD968FA". | [ Si ]
+Kwp | string | Nombre de la llave KWP con la cual fue generado el pinblock, se debe enviar en este campo el nombre asociado a la llave KWP sin el prefijo para poder realizar la “traducción del pinblock”. | [ Si ]
+Reason | int | [Código](#Códigos-de-bloqueo-de-una-tarjeta) de 4 dígitos que indica la razón por la cual será bloqueada la tarjeta. | [ Si ]
+VerificationCode | string | Código de verificación para realizar validaciones en datacrédito relacionadas con el cliente. | [ Si ] 
 
 ## Datos de la respuesta
 
@@ -69,7 +65,3 @@ Código | Razón de bloqueo
 ## Ejemplo en Postman
 
 ![POSTMAN](Perform-HoldCard.png)
-
-
-  
-
