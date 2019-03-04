@@ -100,6 +100,7 @@ Id | `string` | Identificador unívoco de la cuenta.
 Balance | `decimal` | Valor del saldo actual de la cuenta.
 MaskedPan | `string` | Número enmascarado de la cuenta.
 Order | `int` | Orden del elemento para visualizar en interfaz de usuario.
+Name | `string` | Nombre asignado al producto.
 Properties | `list` | Es un conjunto de propiedades o atributos que representan información adicional de la cuenta. [Propiedades de una cuenta](Inquiries-CustomerAccounts.md#accountProperties)
 Source | `int` | Define los sistemas reconocidos desde donde se originaron los datos de la cuenta. [Tipos de sistemas](Inquiries-CustomerAccounts.md#subsystems)
 SourceAccountId | `string` | Identificador de la cuenta que se utilizará en procesos transaccionales
