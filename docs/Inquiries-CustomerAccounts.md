@@ -1,4 +1,4 @@
-# Consultas de productos financieros de un cliente
+# Consultas de productos de un cliente
 
 Expone las operaciones de consulta sobre los productos financieros de un usuario.
 
