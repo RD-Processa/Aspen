@@ -12,6 +12,8 @@ Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :--------------------:
 GET | http://localhost/api/app/inquires/accounts/{DocType}/{DocNumber} | [x]
 
+[^Segmentos de URL]: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan en un ejemplo, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Por ejemplo, sin en la URL de ejemplo apareciera http://localhost/api/operation/value/{value}, para establecer el valor de  `value` en la solicitud a la cadena `abc`, la URL final se vería de la siguiente forma: http://localhost/api/operation/value/abc 
+
 ### Valores de la solicitud
 
 Campo | Tipo de dato | Descripción | Requerido
@@ -91,6 +93,7 @@ curl -X GET \
   }
 ]
 ```
+> Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 ### Valores de la respuesta
 
@@ -206,6 +209,8 @@ curl -X GET \
 ]
 ```
 
+> Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
+
 ### Valores de la respuesta
 
 Campo | Tipo de dato | Descripción
@@ -285,6 +290,8 @@ curl -X GET \
   }
 ]
 ```
+
+> Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 ### Valores de la respuesta
 
