@@ -16,6 +16,8 @@ Permite validar si el código de activación proporcionado por un usuario, corre
 | :---: | -------------------------------------------------- | :--------------------: |
 | POST  | http://localhost/api/app/management/activationcode |          [x]           |
 
+> [^Segmentos de URL]: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan en un ejemplo, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Por ejemplo, sin en la URL de ejemplo apareciera http://localhost/api/operation/value/{value}, para establecer el valor de  value en la solicitud a la cadena abc, la URL final se vería de la siguiente forma: http://localhost/api/operation/value/abc
+
 ### Valores de la solicitud (Body)
 
 |      Campo      | Tipo de dato | Descripción                                                  | Requerido |
@@ -33,6 +35,8 @@ Permite validar si el código de activación proporcionado por un usuario, corre
 ### Datos de la respuesta
 
 Código de estado de HTTP de acuerdo con la especificación [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+
+> Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 ### Valores de respuesta más utilizados
 
