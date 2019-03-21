@@ -8,6 +8,8 @@ Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
 PUT | http://localhost/api/app/tokens/{Token} | [x]
 
+> [^Segmentos de URL]: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan en un ejemplo, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Por ejemplo, sin en la URL de ejemplo apareciera http://localhost/api/operation/value/{value}, para establecer el valor de  `value` en la solicitud a la cadena `abc`, la URL final se vería de la siguiente forma: http://localhost/api/operation/value/abc 
+
 ## Datos de la solicitud
 
 ```json
@@ -30,6 +32,8 @@ Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenizatio
 ## Datos de la respuesta
 
 Código de estado de HTTP de acuerdo con la especificación [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+
+> Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 ### Valores de respuesta más utilizados
 
