@@ -1,8 +1,8 @@
 # Validación de un token de pago
 
-Permite a un adquirente o comercio, verificar la validez de un token de pago que fue generado a través de la aplicación de movilidad del emisor.
+Permite a un adquirente o comercio, verificar la validez de un token transaccional que fue generado a través de la aplicación de movilidad del emisor o enviado a un tarjetahabiente a través de un mensaje SMS u otro medio.
 
-> Cuando la validación es exitosa, se hace un débito en la cuenta asociada con el token de pago.
+> Esta operación no conecta con el autorizador financiero. Se expone aquí con la intención de facilitar la comprobación (generalmente a través de la automatización) de un token generado o enviado a un tarjetahabiente. 
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
@@ -16,7 +16,8 @@ PUT | http://localhost/api/app/tokens/{Token} | [x]
 {
   "DocType": "CC",
   "DocNumber": "0000000000",
-  "Metadata": "RANDOM_DATA_BY_ACQUIRER"
+  "Metadata": "RANDOM_DATA_BY_ACQUIRER",
+  "Amount" : 12345
 }
 ```
 
@@ -24,10 +25,11 @@ PUT | http://localhost/api/app/tokens/{Token} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :--------: | ------------ | :-----:
-{Token} | string | Token de pago que se desea verificar. Valor en la URL sin corchetes | [x]
-DocType | string | Tipo de documento del usuario para el que se genera el token | [x]
-DocNumber | string | Número de documento del usuario para el que se genera el token | [x]
-Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [x]
+{Token} | string | Token de pago que se desea verificar. Valor en la URL sin corchetes | [ Si ]
+DocType | string | Tipo de documento del usuario para el que se genera el token | [ Si ]
+DocNumber | string | Número de documento del usuario para el que se genera el token | [ Si ]
+Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [ Si ]
+Amount | int | Valor de la operación financiera para el que se intenta comprobar la validez del token. | [ Si ]
 
 ## Datos de la respuesta
 
