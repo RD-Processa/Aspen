@@ -31,6 +31,29 @@ Token | string | Valor del token transaccional generado para el usuario. General
 AccountType | string | Identificador del tipo de cuenta de donde se toman los fondos para la transacción. Generalmente este valor lo debe "*ingresar/seleccionar/establecer*" el usuario y/o comercio en el punto de pago. Corresponde con una lista de valores predefinidos por Processa. | [ Si ]
 Amount | int | Valor de la transacción (retiro). Cantidad de dinero que se desea autorizar. | [ Si ]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
+Tags | string | Colección de claves y valores con información asociada con la transacción [Tags](#tags). | [Opcional]
+
+### Tags
+Una colección de claves y valores (ambos de tipo string), que representan información relacionada con la transacción. Todos los valores son opcionales, pero si se envian, deben cumplir con los siguientes formatos:
+
+Claves admitidas | Descripción | Formato admitido | Requerido
+:---: | -------- | :---: | :-----:  
+TerminalId | Código que el adquiriente asigna al punto dentro del comercio desde donde se realiza la transacción. | ^\w{1,8}$ | [Opcional]
+CardAcceptorId | Código que el adquiriente asigna al comercio desde donde se realiza la transacción. | ^\w{1,15}$ | [Opcional]
+CustomerGroup | Identificador del grupo familiar al que pertenece el afiliado. | ^\d{1,2}$ | [Opcional]
+Pan | Últimos 4 dígitos del número de tarjeta utilizado para la transacción. | ^\d{4}$ | [Opcional]
+
+#### Ejemplo de Tags
+
+```json
+{
+  "TerminalId": "XXXXXXXX",
+  "CardAcceptorId": "XXXXXXXXXXXXXXX",
+  "CustomerGroup": "00",
+  "Pan": "1234"
+}
+```
+
 
 ## Datos de la respuesta
 
