@@ -33,6 +33,7 @@ Amount | int | Valor de la transacción (retiro). Cantidad de dinero que se dese
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
 Tags | string | Colección de claves y valores con información asociada con la transacción [Tags](#tags). | [Opcional]
 
+<a name="Tags"></a>
 ### Tags
 Una colección de claves y valores (ambos de tipo string), que representan información relacionada con la transacción. Todos los valores son opcionales, pero si se envian, deben cumplir con los siguientes formatos:
 

@@ -1,6 +1,6 @@
-# Compra con token
+# Pago con token
 
-Procesa una solicitud financiera de compra, utilizando un token transaccional como método de validación.
+Procesa una solicitud financiera de compra(compra), utilizando un token transaccional como método de validación.
 
 | Verbo | Endpoint                                      | Requiere autenticación |
 | :---: | --------------------------------------------- | :--------------------: |
@@ -14,7 +14,6 @@ Procesa una solicitud financiera de compra, utilizando un token transaccional co
 {
   "DocType": "CC",
   "DocNumber": "123456789",
-  "Token": "000000",
   "AccountType": "80",
   "Amount": 99999,
   "Metadata" : "RANDOM_DATA_BY_ACQUIRER"
@@ -29,9 +28,10 @@ DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) d
 DocNumber | string | Número de documento del usuario para el que se generó el token transaccional. | [ Si ]
 Token | string | Valor del token transaccional generado para el usuario. Generalmente le será entregado en un mensaje SMS. | [ Si ]
 AccountType | string | Identificador del tipo de cuenta de donde se toman los fondos para la transacción. Generalmente este valor lo debe "*ingresar/seleccionar/establecer*" el usuario y/o comercio en el punto de pago. Corresponde con una lista de valores predefinidos por Processa. | [ Si ]
-Amount | int | Valor de la transacción (retiro). Cantidad de dinero que se desea autorizar. | [ Si ]
+Amount | int | Valor de la transacción (compra). Cantidad de dinero que se desea autorizar. | [ Si ]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
 Tags | string | Colección de claves y valores con información asociada con la transacción [Tags](#tags). | [Opcional]
+
 
 ### Tags
 Una colección de claves y valores (ambos de tipo string), que representan información relacionada con la transacción. Todos los valores son opcionales, pero si se envian, deben cumplir con los siguientes formatos:

@@ -20,5 +20,6 @@ pages:
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
 - Retiro con token transaccional: Perform-Withdrawal.md
 - Pago con token transaccional: Perform-Payment.md
+- Reverso de Compra o Retiro: Perform-Reversal.md
 - Solicitud de envío de token transaccional: Send-TrxToken.md
 - (Apéndice) Mensajes de respuesta: Responses.md
