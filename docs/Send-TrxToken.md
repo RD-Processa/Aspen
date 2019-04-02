@@ -25,6 +25,29 @@ Campo | Tipo de dato | Descripción | Requerido
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se solicita la generación de un token transaccional. | [ Si ] 
 DocNumber | string | Número de documento del usuario para el que se solicita la generación de un token transaccional. | [ Si ] 
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
+Tags | string | Colección de claves y valores con información asociada para la generación del token [Tags](#tags). | [Opcional]
+
+<a name="Tags"></a>
+### Tags
+Una colección de claves y valores (ambos de tipo string), que representan información relacionada con la transacción. Todos los valores son opcionales, pero si se envian, deben cumplir con los siguientes formatos:
+
+Claves admitidas | Descripción | Formato admitido | Requerido
+:---: | -------- | :---: | :-----:  
+TerminalId | Código que el adquiriente asigna al punto dentro del comercio desde donde se realiza la transacción. | ^\w{1,8}$ | [ No ]
+CardAcceptorId | Código que el adquiriente asigna al comercio desde donde se realiza la transacción. | ^\w{1,15}$ | [ No ]
+CustomerGroup | Identificador del grupo familiar al que pertenece el afiliado. | ^\d{1,2}$ | [ No ]
+Pan | Últimos 4 dígitos del número de tarjeta utilizado para la transacción. | ^\d{4}$ | [ No ]
+
+#### Ejemplo de Tags
+
+```json
+{
+  "TerminalId": "XXXXXXXX",
+  "CardAcceptorId": "XXXXXXXXXXXXXXX",
+  "CustomerGroup": "00",
+  "Pan": "1234"
+}
+```
 
 ## Datos de la respuesta
 
