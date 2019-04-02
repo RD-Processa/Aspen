@@ -69,7 +69,7 @@ Vincula la información de una cuenta a la lista de cuentas registradas para tra
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-POST | http://localhost/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber} | [x]
+POST | http://localhost/api/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
@@ -106,7 +106,7 @@ Desvincula la información de una cuenta de la lista de cuentas registradas para
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-DELETE | http://localhost/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber}/alias/{Alias} | [x]
+DELETE | http://localhost/api/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber}/alias/{Alias} | [x]
 
 ### Valores de la solicitud
 
