@@ -15,6 +15,7 @@ Procesa una solicitud financiera de compra(compra), utilizando un token transacc
   "DocType": "CC",
   "DocNumber": "123456789",
   "AccountType": "80",
+  "Token": "0000000"
   "Amount": 99999,
   "Metadata" : "RANDOM_DATA_BY_ACQUIRER"
 }
@@ -65,9 +66,9 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
-200 | int | El token de retiro se validó satisfactoriamente y se realizó el descuento de los fondos monetarios en la cuenta del usuario. 
-404 | int | El token de retiro no existe, no es válido, ya expiró o fue generado por un valor diferente. 
-406 | int | El token de retiro se validó satisfactoriamente, pero el autorizador financiero denegó la transacción.  
+200 | int | El token de pago se validó satisfactoriamente y se realizó el descuento de los fondos monetarios en la cuenta del usuario. 
+404 | int | El token de pago no existe, no es válido, ya expiró o fue generado por un valor diferente. 
+406 | int | El token de pago se validó satisfactoriamente, pero el autorizador financiero denegó la transacción.  
 
 Cuando el estatus de la operación es 200 (exitoso), el cuerpo de la respuesta incluye el número de autorización generado:
 
