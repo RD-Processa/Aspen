@@ -15,7 +15,7 @@ Procesa una solicitud financiera de compra(compra), utilizando un token transacc
   "DocType": "CC",
   "DocNumber": "123456789",
   "AccountType": "80",
-  "Token": "0000000"
+  "Token": "0000000",
   "Amount": 99999,
   "Metadata" : "RANDOM_DATA_BY_ACQUIRER"
 }
