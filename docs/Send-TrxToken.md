@@ -63,6 +63,15 @@ HttpStatus | Tipo | Descripción
 503 | int | No fue posible entregar el token transaccional al usuario. No se encontró en el sistema o no se tiene información para la entrega. 
 417 | int | No se pudo enviar el token, el campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
 
+Cuando el estatus de la operación es 200 (exitoso), el cuerpo de la respuesta puede incluir un diccionario con datos relevates para la operación (opcionales):
+
+```json
+{
+  "Email": "nombre@servidor.com"
+}
+
+```
+
 ## Ejemplo en Postman
 
 ![POSTMAN](Send-TrxToken.png)
