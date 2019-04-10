@@ -198,3 +198,8 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 406
 - Reason: El sistema autorizador rechazo la transacción. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
 - EventId: 87000
+
+## ExpectationFailed
+- StatusCode: 417
+- Reason: No se pudo entregar la notificación del token. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
+- EventId: 20101
