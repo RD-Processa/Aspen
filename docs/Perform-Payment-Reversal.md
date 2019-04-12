@@ -1,4 +1,4 @@
-# Reverso de pago con token transaccional
+# Reverso: Pago con token transaccional
 
 Procesa una solicitud financiera de reverso de una compra.
 
@@ -76,6 +76,6 @@ HttpStatus | Tipo | Descripción
 
 - [Retiro con token](Perform-Withdrawal.md)
 
-- [Reverso de retiro](Perform-Withdrawal-Reversal.md)
+- [Reverso: Retiro con token transaccional](Perform-Withdrawal-Reversal.md)
 
 - [Mensajes de respuesta](Responses.md)
