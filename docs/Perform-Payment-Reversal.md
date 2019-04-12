@@ -1,10 +1,10 @@
-# Reverso de Compra o Retiro
+# Reverso de pago con token transaccional
 
-Procesa una solicitud financiera de reverso de una compra o retiro.
+Procesa una solicitud financiera de reverso de una compra.
 
 | Verbo | Endpoint                                      | Requiere autenticación |
 | :---: | --------------------------------------------- | :--------------------: |
-| PATCH  | http://localhost/api/app/financial/reversal/{TransactionId} |          [ Si ]           |
+| PATCH  | http://localhost/api/app/financial/payment |          [ Si ]           |
 
 [^Segmentos de URL]: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan en un ejemplo, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Por ejemplo, sin en la URL de ejemplo apareciera http://localhost/api/operation/value/{value}, para establecer el valor de  `value` en la solicitud a la cadena `abc`, la URL final se vería de la siguiente forma: http://localhost/api/operation/value/abc 
 
@@ -12,11 +12,11 @@ Procesa una solicitud financiera de reverso de una compra o retiro.
 
 ```json
 {
+  "TransactionId": "OriginalNonceValue",
   "DocType": "CC",
   "DocNumber": "123456789",
   "AccountType": "80",
-  "Amount": 99999,
-  "Metadata" : "RANDOM_DATA_BY_ACQUIRER"
+  "Amount": 99999
 }
 ```
 
@@ -24,12 +24,11 @@ Procesa una solicitud financiera de reverso de una compra o retiro.
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :--------: | ------------ | :-----:
-{TransactionId} | string | Identificador de la transacción que se  intenta reversar. Corresponde con el valor del campo [Nonce](JWT-Request#Nonce) de la solicitud en la transacción original de Retiro o Compra | [ Si ]
+TransactionId | string | Identificador de la transacción que se intenta reversar. Corresponde con el valor del campo [Nonce](JWT-Request#Nonce) de la solicitud en la transacción original de compra. | [ Si ]
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se procesó la transacción original. | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se procesó la transacción original. | [ Si ]
 AccountType | string | Identificador del tipo de cuenta de la transacción original. | [ Si ]
 Amount | int | Valor de la transacción original. | [ Si ]
-Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps) que se enviaron en la transacción original. | [Opcional] 
 Tags | string | Colección de claves y valores con información asociada, que se enviaron en la transacción original [Tags](#tags). | [Opcional]
 
 <a name="Tags"></a>
@@ -73,8 +72,10 @@ HttpStatus | Tipo | Descripción
 
 - [Tipos de documentos reconocidos](Inquiries-CustomerAccounts.md#DocTypes)
 
+- [Pago con token](Perform-Payment.md)
+
 - [Retiro con token](Perform-Withdrawal.md)
 
-- [Pago con token](Perform-Payment.md)
+- [Reverso de retiro](Perform-Withdrawal-Reversal.md)
 
 - [Mensajes de respuesta](Responses.md)

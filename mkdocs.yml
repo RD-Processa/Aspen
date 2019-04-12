@@ -13,13 +13,15 @@ pages:
 - Enviar un token de autenticación: Send-Token.md
 - Cambiar el secreto de una aplicación: Update-AppSecret.md
 - Tokenización de pagos: Tokenization.md
-- Generación de un token transaccional: Generate-PaymentToken.md
-- Validación de un token transaccional: Redeem-PaymentToken.md
+  - Generación de un token transaccional: Generate-PaymentToken.md
+  - Validación de un token transaccional: Redeem-PaymentToken.md
+  - Pago con token transaccional: Perform-Payment.md  
+  - Solicitud de envío de token transaccional: Send-TrxToken.md  
+  - Retiro con token transaccional: Perform-Withdrawal.md  
 - Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
 - Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
-- Retiro con token transaccional: Perform-Withdrawal.md
-- Pago con token transaccional: Perform-Payment.md
-- Reverso de Compra o Retiro: Perform-Reversal.md
-- Solicitud de envío de token transaccional: Send-TrxToken.md
+- Reversos:
+  - De pago con token transaccional: Perform-Payment-Reversal.md
+  - De retiro con token transaccional: Perform-Withdrawal-Reversal.md
 - (Apéndice) Mensajes de respuesta: Responses.md
