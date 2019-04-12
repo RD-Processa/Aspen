@@ -16,8 +16,7 @@ Procesa una solicitud financiera de reverso de un retiro.
   "DocType": "CC",
   "DocNumber": "123456789",
   "AccountType": "80",
-  "Amount": 99999,
-  "Metadata" : "RANDOM_DATA_BY_ACQUIRER"
+  "Amount": 99999
 }
 ```
 
@@ -29,8 +28,7 @@ TransactionId | string | Identificador de la transacción que se  intenta revers
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se procesó la transacción original. | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se procesó la transacción original. | [ Si ]
 AccountType | string | Identificador del tipo de cuenta de la transacción original. | [ Si ]
-Amount | int | Valor de la transacción original. | [ Si ]
-Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps) que se enviaron en la transacción original. | [Opcional] 
+Amount | int | Valor de la transacción original. | [ Si ] 
 Tags | string | Colección de claves y valores con información asociada, que se enviaron en la transacción original [Tags](#tags). | [Opcional]
 
 <a name="Tags"></a>
