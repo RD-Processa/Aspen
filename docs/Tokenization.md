@@ -1,4 +1,4 @@
-# Tokenización
+# Tokenización de pagos (Generalidades)
 
 La tokenización permite a los emisores, adquirentes y comerciantes ofrecer servicios de pago más seguros al reemplazar los números de tarjeta con valores alternativos, desconectando el número de tarjeta o plástico y remplazándolo con un identificador único llamado `token de pago`. El 'mapeo' entre el PAN real (número de tarjeta o plástico) y un token de pago se almacena de manera segura en una bóveda electrónica, ocultando la información del PAN original, para eliminar este valor de los entornos donde los datos puedan ser vulnerables.
 

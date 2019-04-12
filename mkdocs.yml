@@ -12,7 +12,8 @@ pages:
 - Generar un token de autenticación: Generate-Token.md
 - Enviar un token de autenticación: Send-Token.md
 - Cambiar el secreto de una aplicación: Update-AppSecret.md
-- Tokenización de pagos: Tokenization.md
+- Tokenización de pagos: 
+  - Generalidades: Tokenization.md
   - Generación de un token transaccional: Generate-PaymentToken.md
   - Validación de un token transaccional: Redeem-PaymentToken.md
   - Pago con token transaccional: Perform-Payment.md  
