@@ -44,6 +44,8 @@ CardAcceptorId | Código que el adquiriente asigna al comercio desde donde se re
 CustomerGroup | Identificador del grupo familiar al que pertenece el afiliado. | ^\d{1,2}$ | [Opcional]
 Pan | Últimos 4 dígitos del número de tarjeta utilizado para la transacción. | ^\d{4}$ | [Opcional]
 
+> Cuando se utiliza el campo Tags en una solicitud, es necesario establecer la cabecera [Content-Type]( https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) al valor application/json
+
 #### Ejemplo de Tags
 
 ```json
