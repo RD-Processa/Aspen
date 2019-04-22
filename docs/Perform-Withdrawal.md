@@ -4,7 +4,7 @@ Procesa una solicitud financiera de retiro, utilizando un token transaccional co
 
 | Verbo | Endpoint                                      | Requiere autenticación |
 | :---: | --------------------------------------------- | :--------------------: |
-| POST  | http://localhost/api/app/financial/withdrawal |          [ Si ]           |
+| POST  | http://localhost/api/app/financial/withdrawal |          [ Si ]        |
 
 [^Segmentos de URL]: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan en un ejemplo, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Por ejemplo, sin en la URL de ejemplo apareciera http://localhost/api/operation/value/{value}, para establecer el valor de  `value` en la solicitud a la cadena `abc`, la URL final se vería de la siguiente forma: http://localhost/api/operation/value/abc 
 
@@ -55,7 +55,6 @@ Pan | Últimos 4 dígitos del número de tarjeta utilizado para la transacción.
 }
 ```
 
-
 ## Datos de la respuesta
 
 > Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
@@ -83,8 +82,6 @@ Cuando el estatus de la operación es 200 (exitoso), el cuerpo de la respuesta i
    <p class="last">Indiferentemente al código de la respuesta, el token transaccional utilizado se invalidará, ya que se trata de un <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>.</p>
 </div>
 
-
-
 ## Ejemplo en Postman
 
 ![POSTMAN](Perform-Withdrawal.png)
@@ -92,12 +89,6 @@ Cuando el estatus de la operación es 200 (exitoso), el cuerpo de la respuesta i
 ## Información relacionada
 
 - [Generar un token de autenticación](Generate-Token.md)
-
 - [Registro de aplicaciones](App_Register.md)
-
 - [Mensajes de respuesta](Responses.md)
-
 - [Tipos de documentos reconocidos](Inquiries-CustomerAccounts.md#DocTypes)
-
-  
-

@@ -6,11 +6,11 @@ Expone las operaciones que facilitan la administración de las cuentas para tran
 
 Obtiene la información de las cuentas vinculadas a un cliente para realizar transferencia de fondos.
 
-> Cuando el cliente no tiene cuentas registradas la respuesta será una lista vacía.
-
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
 GET | http://localhost/api/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber} | [x]
+
+**[Segmentos de URL]**: La información entre corchetes en la URL se denomina segmentos de URL y aplican solo para algunas operaciones. Cuando aparezcan, deben ser reemplazados por sus valores correspondientes omitiendo los corchetes. Usando como ejemplo la siguiente URL: `http://localhost/api/operation/value/{value}`, se establecerá el valor: `abc` en el segmento: `{value}` y la URL final sería: `http://localhost/api/operation/value/abc`
 
 ### Valores de la solicitud
 
@@ -55,13 +55,20 @@ curl -X GET \
 ]
 ```
 
-### Valores de la respuesta
+### Descripción de la respuesta
 
 Campo | Tipo de dato | Descripción
 :---: | :----------: | -----------
 Alias | `string` | Nombre que identifica a la cuenta.
 CardHolderName | `string` | Nombre del tarjetahabiente o titular de la cuenta.
 MaskedPan | `string` | Número enmascarado de la cuenta.
+
+### Valores de respuesta comunes
+
+HttpStatus | Tipo | Descripción
+:--------: | :--: | -----------
+200 | int | La solicitud finalizó satisfactoriamente.
+204 | int | La solicitud finalizó satisfactoriamente pero no hay contenido adicional en la respuesta.
 
 ## Registrar una cuenta para transferencias
 
@@ -96,9 +103,13 @@ curl -X POST http://localhost/api/app/transfers/accounts/docType/CC/docNumber/12
   -d "DocType=CC&DocNumber=32287028&Alias=Selene-Figueroa&AccountNumber=5423149228861111"
 ```
 
-### Datos de la respuesta
+### Valores de respuesta más utilizados
 
-Código de estado de HTTP de acuerdo con la especificación **[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)** ([Valores de respuesta más utilizados](Admin-CustomerTransferAccounts.md#httpStatusCodes))
+HttpStatus | Tipo de dato | Descripción
+:--------: | :----------: | -----------
+200 | `int` | La solicitud finalizó satisfactoriamente.
+406 | `int` | Alguno de los valores proporcionados es invalido.
+409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados.
 
 ## Eliminar una cuenta registrada
 
@@ -118,7 +129,7 @@ Campo | Tipo de dato | Descripción | Requerido
 
 #### Ejemplo en Postman
 
-Eliminar el registro de la cuenta identificada con el nombre `Selene-Figueroa` asociada con el cliente identificado con el tipo de documento `CC` (Cedula de ciudadanía), número `12345678`
+Eliminar el registro de la cuenta identificada con el nombre `Selene-Figueroa` asociada con el cliente identificado con el tipo de documento `CC` (Cedula de ciudadanía) y el número `12345678`
 
 ![Preview](Unregister-TransferAccount-Request-PostmanExample.png)
 
@@ -131,20 +142,15 @@ curl -X DELETE \
   -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImM0Y2JiMWU2LWE0MGMtNGJkNi04MGFj..."
 ```
 
-### Datos de la respuesta
-
-Código de estado de HTTP de acuerdo con la especificación **[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)** ([Valores de respuesta más utilizados](Admin-CustomerTransferAccounts.md#httpStatusCodes))
-## Anexos
-
 ### Valores de respuesta más utilizados
-
-<div id="httpStatusCodes"></div>
 
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-400 | `int` | Alguno de los valores proporcionados es invalido.
-409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados.
+404 | `int` | No se encontró la cuenta registrada con el alias indicado.
+406 | `int` | Alguno de los valores proporcionados es invalido.
+
+## Anexos
 
 ### Tipos de documento
 
