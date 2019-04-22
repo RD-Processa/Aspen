@@ -53,7 +53,6 @@ Pan | Últimos 4 dígitos del número de tarjeta utilizado para la transacción.
 }
 ```
 
-
 ## Datos de la respuesta
 
 > Si al procesar la respuesta del servicio está utilizando un serializador que distinga mayúsculas y minúsculas, tenga en cuenta que Aspen genera todas sus respuestas utilizando el formato conocido como [LowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)
@@ -64,18 +63,14 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
-200 | int | La solicitud se proceso satisfactoriamente. 
+200 | int | La solicitud se proceso satisfactoriamente.
 400 | int | La información proporcionada para la transacción original está errada. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
-404 | int | No se encontró la transacción original. 
+404 | int | No se encontró la transacción original.
 
 ## Información relacionada
 
 - [Tipos de documentos reconocidos](Inquiries-CustomerAccounts.md#DocTypes)
-
 - [Pago con token](Perform-Payment.md)
-
 - [Retiro con token](Perform-Withdrawal.md)
-
 - [Reverso: Retiro con token transaccional](Perform-Withdrawal-Reversal.md)
-
 - [Mensajes de respuesta](Responses.md)
