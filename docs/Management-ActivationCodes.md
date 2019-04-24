@@ -2,7 +2,7 @@
 
 ## Contexto 
 
-Un código de activación es un contraseña de un solo uso (compuesta por varios digitos, <*generalmente enre cuatro y seis*>) que se puede utilizar para `autenticar` a un usuario. Funciona como un [OTP](https://en.wikipedia.org/wiki/One-time_password), asociado con el identificador de un usuario en una institución. Por ejemplo, la institución ACME podria generar el código de activación *999999,* para el usuario identificado con el documento ABC.
+Un código de activación es un contraseña de un solo uso (compuesta por varios digitos, <*generalmente entre cuatro y seis*>) que se puede utilizar para `autenticar` a un usuario. Funciona como un [OTP](https://en.wikipedia.org/wiki/One-time_password), asociado con el identificador de un usuario en una institución. Por ejemplo, la institución ACME podria generar el código de activación *999999,* para el usuario identificado con el documento ABC.
 
 Para un escenario como este, **Aspen** puede validar que el código proporcionado con el usuario ABC, corresponde con el emitido por la entidad ACME.
 

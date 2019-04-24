@@ -1,6 +1,6 @@
 # Cambiar el secreto de una aplicación
 
-**Aspen** permite al propietario de una aplicación, cambiar o actualizar el secreto para firmar las solicitudes.
+**Aspen** permite al propietario de una aplicación, cambiar o actualizar el secreto utilizado para firmar las solicitudes.
 
 Cambiar el secreto de su aplicación al igual que en la [solicitud de un token de autenticación](JWT-Request.md) necesitará de las cabeceras de autenticación personalizadas junto con un parámetro que recibe el valor para el nuevo secreto.
 

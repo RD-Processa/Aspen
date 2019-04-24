@@ -15,12 +15,19 @@ Entonces, es importante familiarizarse con los siguientes conceptos:
 ---
 
 ### Cabecera Content-Type
-Los valores admitidos para la cabecera [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) son: **application/x-www-form-urlencoded** (valor predeterminado) y **application/json**. Cualquier otro valor será considerado incorrecto. Esta cabecera es opcional. 
+
+Los valores admitidos para la cabecera [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) son: **application/x-www-form-urlencoded** (valor predeterminado) y **application/json**. 
+Cualquier otro valor será considerado incorrecto. Esta cabecera es opcional.  
 
 <a name="Nonce"></a>
+
 ### Nonce
 
-Es un número arbitrario que solo se puede utilizar una vez. Se trata de un número (generalmente aleatorio) emitido para garantizar que las comunicaciones antiguas no puedan reutilizarse en ataques de repetición. El algoritmo que lo genera debería asegurar una probabilidad casi nula de repetir un valor. Podría utilizar un identificador único universal como [GUID](https://docs.microsoft.com/en-us/dotnet/api/system.guid), [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) o el algoritmo de su preferencia.
+Es un número arbitrario que solo se puede utilizar una vez.  Se trata de un número (generalmente aleatorio) emitido para garantizar 
+que las comunicaciones antiguas no puedan reutilizarse en ataques de repetición. 
+
+El algoritmo que lo genera debería asegurar una probabilidad casi nula de repetir un valor. Podría utilizar un identificador único universal como [GUID](https://docs.microsoft.com/en-us/dotnet/api/system.guid),
+[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) o el algoritmo de su preferencia.
 
 [Consulte Wikipedia para más información](https://goo.gl/kY4tu0)
 
@@ -36,7 +43,9 @@ var nonce = Guid.NewGuid().ToString("D");
 
 ### Epoch
 
-Corresponde con el número de segundos (valor positivo) transcurridos desde la medianoche UTC del 1 de enero de 1970 (00:00). Se utiliza como un punto de referencia a partir del cual se mide el tiempo con el fin de omitir ambigüedades, debido a la gran variedad de unidades de tiempo empleadas en sistemas informáticos.
+Corresponde con el número de segundos (valor positivo) transcurridos desde la medianoche UTC del 1 de enero de 1970 (00:00). 
+Se utiliza como un punto de referencia a partir del cual se mide el tiempo con el fin de omitir ambigüedades, 
+debido a la gran variedad de unidades de tiempo empleadas en sistemas informáticos.
 
 [Consulte Wikipedia para más información](https://goo.gl/fLCCsq)
 
@@ -58,7 +67,8 @@ DateTimeOffset.FromUnixTimeSeconds(exp);
 
 ### Creación de un JWT
 
-Es bastante probable que su lenguaje de programación preferido incluya al menos una librería/clase/modulo que facilite la creación y verificación de tokens JWT de extremo a extremo. Para este ejemplo vamos a utilizar el paquete de librerías [Jwt.Net](https://www.nuget.org/packages/JWT) para [.NET Framework](https://en.wikipedia.org/wiki/.NET_Framework).
+Es bastante probable que su lenguaje de programación preferido incluya al menos una librería/clase/modulo que facilite la creación y verificación de tokens JWT de extremo a extremo. 
+Para este ejemplo vamos a utilizar el paquete de librerías [Jwt.Net](https://www.nuget.org/packages/JWT) para [.NET Framework](https://en.wikipedia.org/wiki/.NET_Framework).
 
 ```C#
 // Install-Package JWT
@@ -123,6 +133,7 @@ if (response.StatusCode == HttpStatusCode.OK)
 ```
 
 ### Descripción gráfica
+
 ![Solicitar el token de autenticación](JWT-Request.PNG)
 
 ![Procesar la respuesta](JWT-Response.PNG)
@@ -150,6 +161,7 @@ jsonReponse.iat // Representación de la fecha y hora Epoch en que se emitió el
 ```
 
 ### Descripción gráfica
+
 ![Decodificar la respuesta](JWT-Decode.PNG)
 
 ### Ejemplo
@@ -173,7 +185,11 @@ Console.WriteLine(json);
 El resultado será una cadena ahora en formato JSON con los siguientes valores:
 
 ```json
-{"jti":"b8e4511b-ece9-469d-8c3d-49b497ef5384","exp":1526075601,"iat":1525989200}
+{  
+   "jti":"b8e4511b-ece9-469d-8c3d-49b497ef5384",
+   "exp":1526075601,
+   "iat":1525989200
+}
 ```
 
 | Nombre  | Descripción |

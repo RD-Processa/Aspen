@@ -4,14 +4,15 @@ repo_url: https://github.com/RD-Processa/Aspen
 
 pages:
 - Introducción: index.md
-- Registro de aplicaciones: App_Register.md
-- Asegurar una clave API: Securing_AppKey.md
-- Identificación de aplicaciones: App_Setup.md
-- Pasos para crear un JWT : JWT-Build.md
-- Solicitar un token de autenticación: JWT-Request.md
-- Generar un token de autenticación: Generate-Token.md
-- Enviar un token de autenticación: Send-Token.md
-- Cambiar el secreto de una aplicación: Update-AppSecret.md
+- Conectar con Aspen:
+  - Registro de aplicaciones: App_Register.md
+  - Asegurar una clave API: Securing_AppKey.md
+  - Identificación de aplicaciones: App_Setup.md
+  - Pasos para crear un JWT : JWT-Build.md
+  - Solicitar un token de autenticación: JWT-Request.md
+  - Generar un token de autenticación: Generate-Token.md
+  - Enviar un token de autenticación: Send-Token.md
+  - Cambiar el secreto de una aplicación: Update-AppSecret.md
 - Tokenización de pagos: 
   - Generalidades: Tokenization.md
   - Generación de un token transaccional: Generate-PaymentToken.md
@@ -22,7 +23,9 @@ pages:
 - Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
 - Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
+- Anulación de una transacción: Perform-Refund.md  
 - Reversos:
   - De pago con token transaccional: Perform-Payment-Reversal.md
   - De retiro con token transaccional: Perform-Withdrawal-Reversal.md
+  - De anulación: Perform-Refund-Reversal.md
 - (Apéndice) Mensajes de respuesta: Responses.md
