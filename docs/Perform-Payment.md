@@ -69,6 +69,7 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
 200 | int | El token de pago se validó satisfactoriamente y se realizó el descuento de los fondos monetarios en la cuenta del usuario. 
+203 | int | El token de pago se validó satisfactoriamente, pero no se realizó el descuento de los fondos monetarios en la cuenta del usuario. La transacción fue reversada de forma automática. El campo  `Reason` de la respuesta describe el problema que se encontró.
 404 | int | El token de pago no existe, no es válido, ya expiró o fue generado por un valor diferente. 
 406 | int | El token de pago se validó satisfactoriamente, pero el autorizador financiero denegó la transacción.  
 
