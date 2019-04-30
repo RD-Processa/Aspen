@@ -14,7 +14,7 @@ Procesa una solicitud financiera de reverso de una anulación.
 
 ```json
 {
-  "AuthNumber": "000000",
+  "TransactionId": "OriginalNonceValue",
   "DocType": "CC",
   "DocNumber": "123456789",
   "AccountType": "80",
@@ -26,7 +26,7 @@ Procesa una solicitud financiera de reverso de una anulación.
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :--------: | ------------ | :-----:
-AuthNumber | string | Identificador del número de autorización generado para la transacción original. | [ Si ]
+TransactionId | string | Identificador de la transacción de anulación que se intenta reversar. Corresponde con el valor del campo [Nonce](JWT-Request#Nonce) de la solicitud original de anulación. | [ Si ]
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se procesó la transacción original. | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se procesó la transacción original. | [ Si ]
 AccountType | string | Identificador del tipo de cuenta de la transacción original. | [ Si ]
