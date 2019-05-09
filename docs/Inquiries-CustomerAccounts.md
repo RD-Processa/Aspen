@@ -62,7 +62,12 @@ curl -X GET \
         "label": "Lugar",
         "key": "LastTranCardAcceptor",
         "value": "Almacen San Juan"
-      }
+      },
+      {
+        "label": "Estado tarjeta",
+        "key": "CardStatusName",
+        "value": "ACTIVA"
+      }      
     ]
   },
   {
