@@ -40,17 +40,23 @@ curl -X GET \
   {
     "alias": "Paloma Veliz",
     "cardHolderName": "Paloma Veliz Chávez",
-    "maskedPan": "************6526"
+    "maskedPan": "************6526",
+    "cardHolderDocType": "CC",
+    "cardHolderDocNumber": "000000000"
   },
   {
     "alias": "Doris Dueñas",
     "cardHolderName": "Doris Dueñas Urena",
-    "maskedPan": "************5678"
+    "maskedPan": "************5678",
+    "cardHolderDocType": "CC",
+    "cardHolderDocNumber": "000000000"
   },
   {
     "alias": "Michelle Carrillo",
     "cardHolderName": "Michelle Carrillo Puente",
-    "maskedPan": "************9101"
+    "maskedPan": "************9101",
+    "cardHolderDocType": "CC",
+    "cardHolderDocNumber": "000000000"
   }
 ]
 ```
@@ -62,6 +68,9 @@ Campo | Tipo de dato | Descripción
 Alias | `string` | Nombre que identifica a la cuenta.
 CardHolderName | `string` | Nombre del tarjetahabiente o titular de la cuenta.
 MaskedPan | `string` | Número enmascarado de la cuenta.
+CardHolderDocType | `string` | Tipo del documento del titular de la cuenta.
+CardHolderDocNumber | `string` |Número del documento del titular de la cuenta.
+
 
 ### Valores de respuesta comunes
 
