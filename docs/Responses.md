@@ -121,7 +121,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 400
 - Reason: Falta alguna de las cabeceras de autenticación. El campo `ReasonPhrase` contiene un mensaje que describe la cabecera faltante.
-- EventId: 20002.
+- EventId: 15842.
 
 ## NonceAlreadyProcessed
 
