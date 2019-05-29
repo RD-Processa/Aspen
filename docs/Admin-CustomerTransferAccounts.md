@@ -117,8 +117,8 @@ curl -X POST http://localhost/api/app/transfers/accounts/docType/CC/docNumber/12
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-406 | `int` | Alguno de los valores proporcionados es invalido.
-409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados.
+406 | `int` | Alguno de los valores proporcionados es invalido. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
+409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
 
 ## Eliminar una cuenta registrada
 
@@ -156,8 +156,8 @@ curl -X DELETE \
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-404 | `int` | No se encontró la cuenta registrada con el alias indicado.
-406 | `int` | Alguno de los valores proporcionados es invalido.
+404 | `int` | No se encontró la cuenta registrada con el alias indicado. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
+406 | `int` | Alguno de los valores proporcionados es invalido. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
 
 ## Anexos
 
