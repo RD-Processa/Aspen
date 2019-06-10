@@ -68,6 +68,7 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
 200 | int | La solicitud se proceso satisfactoriamente.
+406 | int | El autorizador financiero denegó la transacción. Puede examinar el cuerpo de la respuesta (Body) para extraer los valores de `FinancialResponseCode` y `FinancialResponseMessage` donde se encuentra el motivo del rechazo. 
 502 | int | No se ha podido procesar la transacción. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
 
 
