@@ -93,7 +93,7 @@ Campo | Tipo de dato | Descripción | Requerido
 {DocNumber} | `string` | Número de documento del cliente a quien se le vincula la cuenta. Valor esperado en la URL sin corchetes. | [ Si ]
 DocType | `string` | Tipo de documento del titular de la cuenta que se está vinculando. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. | [ Si ]
 DocNumber | `string` | Número de documento del titular de la cuenta que se está vinculando. | [ Si ]
-Alias | `string` | Nombre con el que se identificará a la cuenta. | [ Si ]
+Alias | `string` | Nombre con el que se identificará a la cuenta. Si no se proporciona se establece como alias la combinación del tipo y número de documento del titular de la cuenta, por ejemplo, CC-00000000 | [ No ]
 AccountNumber | `string` | Número de la cuenta. Si no se proporciona un número de cuenta, el sistema busca el primer número de cuenta asociado con el tipo y número de identificación y lo establece como valor predeterminado.   | [ No ]
 
 #### Ejemplo en Postman
@@ -132,9 +132,9 @@ DELETE | http://localhost/api/app/transfers/accounts/docType/{DocType}/docNumber
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
-{DocNumber} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Valor esperado en la URL sin corchetes. | [x]
-{Alias} | `string` | Nombre con el que se identificó la cuenta en el momento de la vinculación. Valor esperado en la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [ Si ]
+{DocNumber} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Valor esperado en la URL sin corchetes. | [ Si ]
+{Alias} | `string` | Nombre con el que se identificó la cuenta en el momento de la vinculación. Valor esperado en la URL sin corchetes. Si no se proporcionó alias en el registro, el sistema combinará el tipo y número de documento del titular de la cuenta, por ejemplo, CC-00000000 | [ No ]
 
 #### Ejemplo en Postman
 
