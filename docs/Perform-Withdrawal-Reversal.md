@@ -69,6 +69,7 @@ HttpStatus | Tipo | Descripción
 200 | int | La solicitud se proceso satisfactoriamente. 
 400 | int | La información proporcionada para la transacción original está errada. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
 404 | int | No se encontró la transacción original. 
+406 | int | El autorizador financiero denegó la transacción. Puede examinar el cuerpo de la respuesta (Body) para extraer los valores de `FinancialResponseCode` y `FinancialResponseMessage` donde se encuentra el motivo del rechazo. 
 
 ## Información relacionada
 
