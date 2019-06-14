@@ -203,3 +203,8 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 417
 - Reason: No se pudo entregar la notificación del token. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
 - EventId: 20101
+
+## NotProcessable
+- StatusCode: 503
+- Reason: No pudimos procesar la solicitud. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el problema encontrado. Generalmente se trata de parametrización inconsistente. El Administrador del sistema ya fue informado.
+- EventId: 20102
