@@ -28,7 +28,7 @@ Campo | Tipo de dato | Descripción | Requerido
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se generó el token transaccional. | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se generó el token transaccional. | [ Si ]
 Token | string | Valor del token transaccional generado para el usuario. Generalmente le será entregado en un mensaje SMS. | [ Si ]
-AccountType | string | Identificador del tipo de cuenta de donde se toman los fondos para la transacción. Generalmente este valor lo debe "*ingresar/seleccionar/establecer*" el usuario y/o comercio en el punto de pago. Corresponde con una lista de valores predefinidos por Processa. | [ Si ]
+AccountType | string | Identificador del tipo de cuenta de donde se toman los fondos para la transacción. Generalmente este valor lo debe "*ingresar/seleccionar/establecer*" el usuario y/o comercio en el punto de pago. Corresponde con una lista de valores predefinidos por Evertec Colombia. | [ Si ]
 Amount | int | Valor de la transacción (compra). Cantidad de dinero que se desea autorizar. | [ Si ]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
 Tags | string | Colección de claves y valores con información asociada con la transacción [Tags](#tags). | [Opcional]

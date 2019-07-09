@@ -39,7 +39,7 @@ Un token posee al menos los siguientes atributos:
 
 Para usar la tokenización, un emisor o comerciante debe convertirse en un _**proveedor de servicios de tokens (TSP)**_.
 
-Cuando un emisor o comercio se convierte en un proveedor de servicios de tokens (TSP), Processa le asignará una cadena de caracteres aleatoria que en adelante se utilizará para establecer los valores de Metadata en el procesamiento de transacciones con Token.
+Cuando un emisor o comercio se convierte en un proveedor de servicios de tokens (TSP), Evertec Colombia le asignará una cadena de caracteres aleatoria que en adelante se utilizará para establecer los valores de Metadata en el procesamiento de transacciones financieras con Token.
 
 ### Ejemplo
 

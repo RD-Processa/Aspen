@@ -7,11 +7,11 @@ assignees: RD-Processa
 
 ---
 
-** Describa el cambio **
+**Describa el cambio**
 Una descripción clara y concisa de por qué cree que se debe hacer un cambio.
 
-** Comportamiento sugerido **
+**Comportamiento sugerido**
 Una descripción clara y concisa de lo que espera que suceda luego del cambio.
 
-** Contexto adicional **
+**Contexto adicional**
 Agregue cualquier otro contexto sobre el problema aquí.
