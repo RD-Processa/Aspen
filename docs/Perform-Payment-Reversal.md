@@ -15,7 +15,6 @@ Procesa una solicitud financiera de reverso de una compra.
   "TransactionId": "OriginalNonceValue",
   "DocType": "CC",
   "DocNumber": "123456789",
-  "AccountType": "80",
   "Amount": 99999
 }
 ```
@@ -27,7 +26,6 @@ Campo | Tipo de dato | Descripción | Requerido
 TransactionId | string | Identificador de la transacción que se intenta reversar. Corresponde con el valor del campo [Nonce](JWT-Request#Nonce) de la solicitud en la transacción original de compra. | [ Si ]
 DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) del usuario para el que se procesó la transacción original. | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se procesó la transacción original. | [ Si ]
-AccountType | string | Identificador del tipo de cuenta de la transacción original. | [ Si ]
 Amount | int | Valor de la transacción original. | [ Si ]
 Tags | string | Colección de claves y valores con información asociada, que se enviaron en la transacción original [Tags](#tags). | [Opcional]
 
