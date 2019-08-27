@@ -26,6 +26,8 @@ DocType | string | [Tipo de documento](Inquiries-CustomerAccounts.md#DocTypes) d
 DocNumber | string | Número de documento del usuario para el que se solicita la generación de un token transaccional. | [ Si ] 
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization/#tps). | [Opcional] 
 Tags | string | Colección de claves y valores con información asociada para la generación del token [Tags](#tags). | [Opcional]
+AccountType | string | Identificador del tipo de cuenta de donde se tomarán los fondos de la transacción. Cuando se utiliza, este valor deberá coincidir con el recibido en el campo `AccountType` de la transacción financiera para la que se intenta utilizar el token como medio de pago. Si no se establece, el token podrá ser utilizado en cualquier tipo de cuenta. | [Opcional] 
+Amount | int | Valor de la transacción para la que se utilizará el token. Cuando se utiliza, este valor deberá ser menor o igual que el recibido en el campo `Amount` de la transacción financiera para la que se intenta utilizar el token como medio de pago. Si no se establece, el token podrá ser utilizado para cualquier valor. | [Opcional] 
 
 <a name="Tags"></a>
 ### Tags
