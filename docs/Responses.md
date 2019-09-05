@@ -61,7 +61,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 400
 - Reason: La solicitud no pudo ser procesada por el servidor. Los datos enviados por el cliente no son válidos. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
-- EventId: \<dinámico, dependiente de las validaciones\>
+- EventId: \> dinámico, dependiente de las validaciones
 
 ## DecodeAuthHeaderFailed
 
