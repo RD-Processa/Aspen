@@ -174,7 +174,7 @@ HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
 404 | `int` | No se encontró la cuenta registrada con los valores suministrados. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
-406 | `int` | Alguno de los valores proporcionados es invalido. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
+400 | `int` | Alguno de los valores proporcionados es invalido. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
 
 ## Anexos
 
