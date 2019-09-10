@@ -151,12 +151,29 @@ curl -X DELETE \
   -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImM0Y2JiMWU2LWE0MGMtNGJkNi04MGFj..."
 ```
 
+## Eliminar una cuenta registrada sin alias
+
+A partir de la versión 2019.09.13.00 se permite la desvinculación de la información de una cuenta de la lista de cuentas registradas para transferencias de un cliente, sin la utilización de un alias de registro.
+
+| Verbo  | Endpoint                                                     | Requiere autenticación |
+| :----: | ------------------------------------------------------------ | :--------------------: |
+| DELETE | http://localhost/api/app/transfers/accounts/docTypeOwner/{docTypeOwner}/docNumberOwner/{docNumberOwner}/docTypeLink/{docTypeLink}/docNumberLink/{docNumberLink} |          [x]           |
+
+### Valores de la solicitud
+
+|      Campo       | Tipo de dato | Descripción                                                  | Requerido |
+| :--------------: | :----------: | ------------------------------------------------------------ | :-------: |
+|  {docTypeOwner}  |   `string`   | Tipo de documento del cliente que tiene vinculada la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. |  [ Si ]   |
+| {docNumberOwner} |   `string`   | Número de documento del cliente que tiene vinculada la cuenta. Valor esperado en la URL sin corchetes. |  [ Si ]   |
+|  {docTypeLink}   |   `string`   | Tipo de documento del titular de la cuenta vinculada. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. |  [ Si ]   |
+| {docNumberLink}  |   `string`   | Número de documento del titular de la cuenta vinculada.      |  [ Si ]   |
+
 ### Valores de respuesta más utilizados
 
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-404 | `int` | No se encontró la cuenta registrada con el alias indicado. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
+404 | `int` | No se encontró la cuenta registrada con los valores suministrados. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
 406 | `int` | Alguno de los valores proporcionados es invalido. El campo `ReasonPhrase` contiene un mensaje que describe el problema encontrado.
 
 ## Anexos
