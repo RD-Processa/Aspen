@@ -6,6 +6,7 @@ pages:
 - Introducción: index.md
 - Conceptos importantes: Overview.md
 - Conectar con Aspen:
+  - Cliente de Aspen: Aspen_Client.md
   - Registro de aplicaciones: App_Register.md
   - Asegurar una clave API: Securing_AppKey.md
   - Identificación de aplicaciones: App_Setup.md
@@ -30,3 +31,4 @@ pages:
   - De retiro con token transaccional: Perform-Withdrawal-Reversal.md
   - De anulación: Perform-Refund-Reversal.md
 - (Apéndice) Mensajes de respuesta: Responses.md
+- Contacto: Issues.md
