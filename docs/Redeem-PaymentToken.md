@@ -28,8 +28,8 @@ Campo | Tipo de dato | Descripción | Requerido
 {Token} | string | Token de pago que se desea verificar. Valor en la URL sin corchetes | [ Si ]
 DocType | string | Tipo de documento del usuario para el que se genera el token | [ Si ]
 DocNumber | string | Número de documento del usuario para el que se genera el token | [ Si ]
-Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [ Si ]
 Amount | int | Valor de la operación financiera para el que se intenta comprobar la validez del token. | [ Si ]
+Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [ No ]
 
 ## Datos de la respuesta
 
