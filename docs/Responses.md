@@ -208,3 +208,9 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 510
 - Reason: No pudimos procesar la solicitud. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el problema encontrado. Generalmente se trata de parametrización inconsistente. El Administrador del sistema ya fue informado.
 - EventId: 20102
+
+## DeprecatedUsage
+- StatusCode: 426
+- Reason: Ha finalizado el ciclo de vida del producto. Por favor utilice la nueva versión. 
+- EventId: 355426
+
